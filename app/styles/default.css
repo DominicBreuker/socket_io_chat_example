@@ -1,0 +1,49 @@
+* {
+  font: 13px Courier, Helvetica, Arial;
+  color: #009900;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;box-sizing: border-box;
+}
+
+body {
+  background: #000A00;
+}
+
+form {
+  background: #b5b8bc;
+  padding: 3px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+form input {
+  background: #001E00;
+  border: 0;
+  padding: 10px;
+  width: 90%;
+  margin-right: .5%;
+}
+
+form button {
+  color: #001E00;
+  width: 9%;
+  background: #009900;
+  border: none;
+  padding: 10px;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#messages li {
+  padding: 5px 10px;
+}
+
+/*#messages li:nth-child(odd) {
+  background: #eee;
+}*/
