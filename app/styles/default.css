@@ -11,7 +11,7 @@ body {
 }
 
 form {
-  background: #b5b8bc;
+  background: #005500;
   padding: 3px;
   position: fixed;
   bottom: 0;
@@ -19,11 +19,19 @@ form {
 }
 
 form input {
+  float:left;
   background: #001E00;
   border: 0;
   padding: 10px;
-  width: 90%;
   margin-right: .5%;
+}
+
+#sender-name {
+  width: 10%;
+}
+
+#m {
+  width: 80%;
 }
 
 form button {
@@ -43,7 +51,3 @@ form button {
 #messages li {
   padding: 5px 10px;
 }
-
-/*#messages li:nth-child(odd) {
-  background: #eee;
-}*/
