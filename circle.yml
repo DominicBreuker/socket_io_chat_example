@@ -1,0 +1,20 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build --rm=false -t dominicbreuker/node_socket_chat_example .
+
+test:
+  override:
+    - docker run -d -p 8888:8888 dominicbreuker/node_socket_chat_example; sleep 10
+    - curl --retry 10 --retry-delay 5 -v http://localhost:8888/channel
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push dominicbreuker/node_socket_chat_example
