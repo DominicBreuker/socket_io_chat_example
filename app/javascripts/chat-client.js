@@ -14,6 +14,7 @@ var loadHistory = function(channel) {
 window.onload = function() {
   var socket = io();
   var sender_id = Math.floor(Math.random() * 1000);
+  document.title = "Chat: " + sender_id;
   var channel = window.location.pathname.split("/")[1];
 
   // join channel and load history
